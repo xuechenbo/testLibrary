@@ -1,0 +1,11 @@
+WebView
+
+https://www.jianshu.com/p/3c94ae673e2a
+Webview的最常用的工具类：WebSettings类、WebViewClient类、WebChromeClient类
+
+WebSettings类：对WebView进行配置和管理
+
+WebViewClient类 ：处理各种通知 & 请求事件
+常见方法1：shouldOverrideUrlLoading()
+
+WebChromeClient类：辅助 WebView 处理 Javascript 的对话框,网站图标,网站标题等等

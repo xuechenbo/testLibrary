@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayf5"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+
+    <include
+        layout="@layout/layout_plan_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_margin="20dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:id="@+id/ll_hkje"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账单金额"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/et_inputPayAmount"
+                style="@style/edit_style"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:digits="1234567890"
+                android:hint="请输入还款金额"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用额度"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/et_principalMoney"
+                style="@style/edit_style"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:digits="1234567890"
+                android:hint="请输入还款本金"
+                android:inputType="number"
+                android:singleLine="true"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_hkrq"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还款时间"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_totalTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:background="@drawable/shape_strike_themecolor_90"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:hint="请选择还款时间"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_8"
+                android:singleLine="true"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_HkbsVisilive"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="还款笔数"
+                android:textColor="@color/black" />
+
+
+            <TextView
+                android:id="@+id/tv_hkbs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:background="@drawable/shape_strike_themecolor_90"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_8"
+                android:text="每日两笔" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_xiaoVisilive"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消还模式"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_xhms"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:background="@drawable/shape_strike_themecolor_90"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_8"
+                android:text="消一还一" />
+        </LinearLayout>
+
+
+        <!--地区-->
+        <LinearLayout
+            android:id="@+id/ll_open_address"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="消费地区"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_choiceArea"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:background="@drawable/shape_strike_themecolor_90"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:hint="选择消费地区"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_8" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/shape_solid_theme_5"
+            android:text="计算周转金"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

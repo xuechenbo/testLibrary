@@ -1,0 +1,89 @@
+package com.monebac.com.wkyk.model
+
+import java.io.Serializable
+
+data class PlanAllModel(
+        val ACQ_CODE: String,
+        val ACQ_NAME: String,
+        val BACK_ID: Any?,
+        val BANK_ACCOUNT: String,
+        val BUCKLE_FEE: String,
+        val BUCKLE_PAY: String,
+        val CB_AMT: Double,
+        val CITY_ID: Any?,
+        val CITY_INDUSTRY: Any?,
+        val CREATE_TIME: CREATETIME,
+        val CUSTOMIZE_CITY: Any?,
+        val DISCOUNTS_MONEY: String,
+        val END_TIME: ENDTIME,
+        val ERR_MSG: Any?,
+        val EVERY_NUM: String,
+        val GROUND_REGION: Any?,
+        val ID: String,
+        val INCREASE_ID: String,
+        val IS_GROUND: String,
+        val LEVEL: String,
+        val MERCHANT_ID: String,
+        val PAY_FREE: String,
+        val PLAN_AMT: String,
+        val PRO: Double,
+        val PROVINCE_ID: Any?,
+        val RATE: Double,
+        val RETURN_MONEY: String,
+        val SALE_FREE: Double,
+        val SALE_NUM: Any?,
+        val START_TIME: STARTTIME,
+        val STATUS: String,
+        val SURPLUS_PAYMENT_MONEY: Double,
+        val SURPLUS_SALE_MONEY: String,
+        val THAW_TRX: Any?,
+        val TYPE: String,
+        val UPDATE_TIME: UPDATETIME,
+        val acqName: String,
+        val fred: String,
+        val numed: String,
+        val payed: String,
+        val planTime: String,
+        val planType: String,
+        val progress: String,
+        val saled: String
+) : Serializable
+
+data class ENDTIME(
+        val date: Int,
+        val day: Int,
+        val hours: Int,
+        val minutes: Int,
+        val month: Int,
+        val nanos: Int,
+        val seconds: Int,
+        val time: Long,
+        val timezoneOffset: Int,
+        val year: Int
+) : Serializable
+
+data class STARTTIME(
+        val date: Int,
+        val day: Int,
+        val hours: Int,
+        val minutes: Int,
+        val month: Int,
+        val nanos: Int,
+        val seconds: Int,
+        val time: Long,
+        val timezoneOffset: Int,
+        val year: Int
+) : Serializable
+
+data class UPDATETIME(
+        val date: Int,
+        val day: Int,
+        val hours: Int,
+        val minutes: Int,
+        val month: Int,
+        val nanos: Int,
+        val seconds: Int,
+        val time: Long,
+        val timezoneOffset: Int,
+        val year: Int
+) : Serializable
